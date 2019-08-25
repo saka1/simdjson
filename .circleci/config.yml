@@ -24,7 +24,7 @@ commands:
       - checkout
       - run: make
       - run: make amalgamate
-      - run: make test
+      - run: make test ARGS=-V
       - run: make checkperf
   cmake_test:
     steps:
@@ -33,7 +33,7 @@ commands:
       - checkout
       - run: cmake $CMAKE_TEST_FLAGS
       - run: make
-      - run: make test
+      - run: make test ARGS=-V
 
 jobs:
 
